@@ -7,6 +7,10 @@ HOST = 'grok.zope.org'
 RELEASEINFOPATH = '/var/www/html/grok/releaseinfo'
 
 def _upload_gtk_versions(packageroot, version):
+    # Create the releaseinfo directory for this version.
+    cmd = 'ssh %s "mkdir %s/%s"' % (HOST, RELEASEINFOPATH, version)
+    print cmd + '\n'
+    print commands.getoutput(cmd)
     # ``scp`` the file to the given destination.
     versions_filename = os.path.join(packageroot, 'grok.cfg')
     cmd = 'scp %s %s:%s/%s/versions.cfg' % (
