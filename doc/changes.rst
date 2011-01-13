@@ -1,1 +1,4 @@
-.. include:: ../CHANGES.txt
+Changes
+=======
+
+
