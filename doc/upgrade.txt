@@ -72,15 +72,16 @@ Extra notes:
   3) In the ``setup.py`` of your project, add the following entry point (again,
      for each 'static' directory your project may have) ::
 
-     'fanstatic.libraries': [
+       'fanstatic.libraries': [
          'PACKAGENAME = PACKAGENAME.resource:library'
-     ]
+       ]
 
   Where the ``PACKAGENAME`` should be replaced with the dotted package name in
   which the 'static' directory resides.
 
   The ``grok.DirectoryResource`` components have not been removed from Grok.
-  So, your directory resources should continue to work unchanged.
+  So, the custom directory resources in your project should continue to work
+  unchanged.
 
 - The way templates are associated to view components has changed. In general,
   this should not lead to problems, just less spurious warnings when starting
