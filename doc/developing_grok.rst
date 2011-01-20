@@ -51,7 +51,7 @@ upload a ``versions.cfg`` file to::
 
    grok.zope.org:/var/www/html/grok/releaseinfo/[VERSION]/versions.cfg
 
-Manual post release steps
+Manual post-release steps
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After having released Grok, the following steps should be taken:
