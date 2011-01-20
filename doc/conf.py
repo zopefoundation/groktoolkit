@@ -68,7 +68,7 @@ copyright = '2006-2010, The Zope Foundation'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = pkg_resources.get_distribution('grok').version
+version = pkg_resources.get_distribution('groktoolkit').version
 # The full version, including alpha/beta/rc tags.
 release = version
 if release.endswith('dev'):
