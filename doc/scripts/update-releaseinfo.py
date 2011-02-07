@@ -11,6 +11,7 @@ import StringIO
 import sys
 import urllib2
 import xml.etree.ElementTree
+import pkg_resources
 
 socket.setdefaulttimeout(10)
 
@@ -39,7 +40,6 @@ GENERATED_WARNING = """\
 
 DOAP_NS = 'http://usefulinc.com/ns/doap#'
 GROKTOOLKIT_ROOT = py.path.svnurl('http://svn.zope.org/repos/main/groktoolkit')
-TAGS_URL = GROKTOOLKIT_ROOT/'tags'
 
 def package_list(
         packages, config, out, line=PACKAGE_LINE):
@@ -68,55 +68,48 @@ def packages(config, key):
     result = filter(None, map(str.strip, result))
     return result
 
-def get_releases():
-    tags = TAGS_URL.listdir()
-    tags.reverse()
-    releases = []
-    for tag in tags:
-        releases.append((tag.basename, tag))
-        break
-    return releases
+def write_package_list(path, version, use_trunk=False):
+    location = GROKTOOLKIT_ROOT / ('tags/%s' % version)
+    if use_trunk:
+        location = GROKTOOLKIT_ROOT / 'trunk'
 
-def write_package_lists(releases, path):
-    for release, location in releases:
-        print 'Writing package list for "%s"' % release
+    print 'Writing package list for Grok Toolkit "%s"' % version, location
 
-        config = ConfigParser.RawConfigParser()
-        config.optionxform = str
-        fp = StringIO.StringIO((location/'grok.cfg').read())
-        config.readfp(fp)
+    config = ConfigParser.RawConfigParser()
+    config.optionxform = str
+    fp = StringIO.StringIO((location/'grok.cfg').read())
+    config.readfp(fp)
+    output = open(path, 'w')
 
-        output = open(os.path.join(path, 'packages-%s.rst' % release), 'w')
+    print >>output, GENERATED_WARNING
 
-        print >>output, GENERATED_WARNING
+    heading = 'Grok %s packages' % version
+    print >>output, '=' * len(heading)
+    print >>output, heading
+    print >>output, '=' * len(heading)
 
-        heading = 'Grok %s packages' % release
-        print >>output, '=' * len(heading)
-        print >>output, heading
-        print >>output, '=' * len(heading)
+    ztk_version = '1.1'
+    print >>output, 'Zope Toolkit %s' % ztk_version
+    print >>output, '------------------------------'
+    print >>output, '`Overview of ZTK-%s <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`' % (ztk_version, ztk_version)
 
-        ztk_version = '1.1'
-        print >>output, 'Zope Toolkit %s' % ztk_version
-        print >>output, '------------------------------'
-        print >>output, '`Overview of ZTK-%s <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`' % (ztk_version, ztk_version)
+    print >>output, 'Packages'
+    print >>output, '--------'
+    included = packages(config, 'included')
+    package_list(included, config, output)
 
-        print >>output, 'Packages'
-        print >>output, '--------'
-        included = packages(config, 'included')
-        package_list(included, config, output)
+    deprecating = packages(config, 'deprecating')
+    if deprecating:
+        print >>output, 'Deprecating'
+        print >>output, '-----------'
+        package_list(deprecating, versions, output)
 
-        deprecating = packages(config, 'deprecating')
-        if deprecating:
-            print >>output, 'Deprecating'
-            print >>output, '-----------'
-            package_list(deprecating, versions, output)
-
-        print >>output, 'Other dependencies'
-        print >>output, '------------------'
-        all = config.options('versions')
-        dependencies = (set(all) - set(included)) - set(deprecating)
-        package_list(dependencies, config, output)
-        output.close()
+    print >>output, 'Other dependencies'
+    print >>output, '------------------'
+    all = config.options('versions')
+    dependencies = (set(all) - set(included)) - set(deprecating)
+    package_list(dependencies, config, output)
+    output.close()
 
 def write_overview(releases, path):
     print "Writing overview"
@@ -163,7 +156,11 @@ See the separate `package list <packages-%s.html>`_ document.
         overview.close()
 
 if __name__ == '__main__':
-    releases = get_releases()
-    path = os.path.abspath(os.path.join('releases'))
-    write_package_lists(releases, path)
-    write_overview(releases, path)
+    path = os.path.abspath(os.path.join('packages.rst'))
+    dist = pkg_resources.get_distribution('groktoolkit')
+    use_trunk = False
+    if dist.precedence <= pkg_resources.DEVELOP_DIST:
+        use_trunk = True
+    write_package_list(path, dist.version, use_trunk=use_trunk)
+
+    #write_overview(releases, path)
