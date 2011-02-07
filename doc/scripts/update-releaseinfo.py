@@ -64,7 +64,7 @@ def packages(config, key):
     if not config.has_option('grok', key):
         print 'Key "%s" not found in section [grok]' % key
         return []
-    result = config.get('grok', key).split('\n')
+    result = config.get('grok', key).splitlines()
     result = filter(None, map(str.strip, result))
     return result
 
@@ -91,6 +91,12 @@ def write_package_list(path, version, use_trunk=False):
     print >>output, """
 Release yadda yadda.
 """
+
+    #ztk_version = None
+    #extends = config.get('buildout', 'extends').splitlines()
+    #for extend in extends:
+    #    if 'ztk-versions.cfg' not in extend:
+    #        continue
 
     ztk_version = '1.1'
     print >>output, 'Zope Toolkit %s' % ztk_version
