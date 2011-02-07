@@ -88,10 +88,19 @@ def write_package_list(path, version, use_trunk=False):
     print >>output, heading
     print >>output, '=' * len(heading)
 
+    print >>output, """
+Release yadda yadda.
+"""
+
     ztk_version = '1.1'
     print >>output, 'Zope Toolkit %s' % ztk_version
     print >>output, '------------------------------'
-    print >>output, '`Overview of ZTK-%s <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`' % (ztk_version, ztk_version)
+    print >>output, """
+This Grok released is based on Zope Toolkit %s.
+
+`Overview <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`_ of the
+ZTK. List of the ZTK `packages <http://docs.zope.org/zopetoolkit/releases/packages-%s.html>`_
+""" % (ztk_version, ztk_version, ztk_version)
 
     print >>output, 'Packages'
     print >>output, '--------'
@@ -111,50 +120,6 @@ def write_package_list(path, version, use_trunk=False):
     package_list(dependencies, config, output)
     output.close()
 
-def write_overview(releases, path):
-    print "Writing overview"
-
-    output = open(os.path.join(path, 'index.rst'), 'w')
-    print >>output, GENERATED_WARNING
-    print >>output, """
-Releases
-========
-
-This area collects release-specific information about the toolkit including a
-list of backward-incompatible changes, new techniques developed, and libraries
-included.
-
-.. toctree::
-    :maxdepth: 1
-
-"""
-    for release, location in releases:
-        print >>output, """
-    overview-%s""" % release
-
-    for release, location in releases:
-        overview = open(os.path.join(path, 'overview-%s.rst' % release), 'w')
-        print >>overview, GENERATED_WARNING
-        title = "Grok %s" % release
-        print >>overview, title
-        print >>overview, "=" * len(title)
-        print >>overview, """
-This document covers major changes in this release that can lead to
-backward-incompatibilities and explains what to look out for when updating.
-
-.. contents::
-    :local:
-
-List of packages
-----------------
-
-See the separate `package list <packages-%s.html>`_ document.
-
-""" % release
-
-        #overview.write((location/'README.txt').read())
-        overview.close()
-
 if __name__ == '__main__':
     path = os.path.abspath(os.path.join('packages.rst'))
     dist = pkg_resources.get_distribution('groktoolkit')
@@ -162,5 +127,3 @@ if __name__ == '__main__':
     if dist.precedence <= pkg_resources.DEVELOP_DIST:
         use_trunk = True
     write_package_list(path, dist.version, use_trunk=use_trunk)
-
-    #write_overview(releases, path)

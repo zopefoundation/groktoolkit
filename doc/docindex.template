@@ -24,7 +24,7 @@
         <span class="linkdescr">How to name your stuff correctly.</span></p>
 
     </td><td width="50%">
-	  <p class="biglink"><a class="biglink" href="{{ pathto("packages") }}">Grok Packages</a><br>
+	  <p class="biglink"><a class="biglink" href="{{ pathto("packages") }}">Packages</a><br>
 	    <span class="linkdescr">How to upgrade your project to a new version of Grok.</span></p>
 
 	  <p class="biglink"><a class="biglink" href="{{ pathto("upgrade") }}">Upgrade notes</a><br>
@@ -33,7 +33,7 @@
       <p class="biglink"><a class="biglink" href="{{ pathto("developing_grok") }}">Developing Grok</a><br>
         <span class="linkdescr">Notes for developers <strong>of</strong> Grok.</span></p>
 
-      <p class="biglink"><a class="biglink" href="{{ pathto("releases") }}">Grok Releases</a><br>
+      <p class="biglink"><a class="biglink" href="{{ pathto("releases") }}">Releases</a><br>
 	    <span class="linkdescr">A history of Grok releases.</span></p>
 
     </td></tr>
