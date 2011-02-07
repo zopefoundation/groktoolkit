@@ -26,12 +26,12 @@
          <span class="linkdescr">How to name your stuff correctly.</span></p>
 
     </td><td width="50%">
-	    <p class="biglink"><a class="biglink" href="{{ pathto("changes") }}"
-	    >What's new in Grok?</a><br>
+	    <p class="biglink"><a class="biglink" href="{{ pathto("releases/index") }}"
+	    >Grok Releases</a><br>
 	    <span class="linkdescr">Changes made in each Grok release.</span></p>
 
 	    <p class="biglink"><a class="biglink" href="{{ pathto("upgrade") }}"
-	    >Upgrading notes</a><br>
+	    >Upgrade notes</a><br>
 	    <span class="linkdescr">How to upgrade your project to a new version of the Grok Toolkit.</span></p>
 
       <p class="biglink"><a class="biglink" href="{{ pathto("developing_grok") }}">Developing Grok</a><br>

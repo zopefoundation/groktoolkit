@@ -5,7 +5,7 @@ Grok Documentation Contents
 .. toctree::
    :maxdepth: 2
 
-   changes.rst
+   releases/index.rst
    upgrade.rst
    tutorial.rst
    grok_overview.rst
