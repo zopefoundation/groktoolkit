@@ -2,28 +2,10 @@
 Grok tutorial
 =============
 
-.. raw:: html
-
-   Also available as <a href="./tutorial.pdf">PDF</a>.
-
 .. contents::
 
 Welcome to the Grok tutorial!
 =============================
-
-.. sidebar:: Getting started with Zope Page Templates
-
-  You can find introductions and more information about Zope Page Templates
-  (ZPT, sometimes also called TAL) in various places:
-
-    http://plone.org/documentation/tutorial/zpt
-
-    http://wiki.zope.org/ZPT/FrontPage
-
-  Note that some of the information in these introductions may refer to
-  concepts not available in Grok or the Zope Toolkit, in particular variables
-  like ``here`` or ``template``. The basic principles will work with Grok
-  however; try reading ``context`` or ``view`` instead.
 
 Grok is a powerful and flexible web application framework for Python
 developers. In this tutorial we will show you the various things you can do
@@ -328,6 +310,20 @@ Change the ``index.pt`` file to contain the following (very simplistic) HTML:
 
 .. include:: groktut/publishing_a_simple_web_page/src/sample/app_templates/index.pt
   :literal:
+
+.. sidebar:: Getting started with Zope Page Templates
+
+  You can find introductions and more information about Zope Page Templates
+  (ZPT, sometimes also called TAL) in various places:
+
+    http://plone.org/documentation/tutorial/zpt
+
+    http://wiki.zope.org/ZPT/FrontPage
+
+  Note that some of the information in these introductions may refer to
+  concepts not available in Grok or the Zope Toolkit, in particular variables
+  like ``here`` or ``template``. The basic principles will work with Grok
+  however; try reading ``context`` or ``view`` instead.
 
 Then reload the page:
 
