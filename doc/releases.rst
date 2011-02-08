@@ -6,8 +6,13 @@ An overview of Grok releases
 
 Information about new features, changes and bug fixes for releases of Grok.
 
+`Grok 1.3.2 <http://grok.zope.org/doc/1.3.2>`_
+  Grok 1.3.2 is a bugfix release of Grok, including updates for
+  `zope.errorview <http://pypi.python.org/pypi/zope.errorview>`_ and
+  `zope.pluggablauth <http://pypi.python.org/pypi/zope.pluggableauth>`_.
+
 `Grok 1.3.1 <http://grok.zope.org/doc/1.3.1>`_
-  Grok 1.3 is a bugfix release of Grok based on the Zope Toolkit 1.1.
+  Grok 1.3.1 is a bugfix release of Grok based on the Zope Toolkit 1.1.
 
 `Grok 1.3 <http://grok.zope.org/doc/1.3>`_
   Grok 1.3 is a feature release of Grok based on the Zope Toolkit 1.1c1.
