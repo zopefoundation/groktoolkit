@@ -4,57 +4,60 @@ Developing Grok
 
 .. contents::
 
-Making Grok (Toolkit) releases
-------------------------------
+Making releases of packages that make up Grok
+=============================================
 
-Manual steps
-~~~~~~~~~~~~
+Making releases
+===============
 
-Grok Toolkit's release procedure (and that of the comprising package like grok
-and the ``grokcore.*`` family of libraries) follows ZTK's `official release
+The release procedure for the packages that comprise Grok, like ``grok`` and
+the ``grokcore.*`` family of libraries, follows ZTK's `official release
 guidelines`_.
 
 .. _`official release guidelines`: http://docs.zope.org/zopetoolkit/process/releasing-software.html
 
-Automated steps
-~~~~~~~~~~~~~~~
+Automating the release
+----------------------
 
 Even if it can be useful to follow these release steps by hand, most of it is
-automated in the `zest.releaser`_ package that is included in Grok Toolkit's
+automated in the `zest.releaser`_ package that is included in groktoolkit's
 ``buildout.cfg``. Using this tool will prevent making mistakes caused by the
 rather repetitive nature of the release process.
 
 .. _`zest.releaser`: http://pypi.python.org/pypi/zest.releaser
 
-Part of the `official release guidelines`_ is reviewing the changelog recorded
-in ``CHANGES.txt``. This is an important step that cannot be automated.
+Before commencing the release it is important to to make sure the packages'
+changelog is up to date. A useful tool, part of the `zest.releaser`_ tool
+chain, is the ``lasttagdiff`` command. This command will output the changes
+between the latest release tag and the current trunk:
 
-In other words, before starting a release make sure that:
+  $ ./bin/lasttagdiff.
 
-  1) All tests pass
-  2) All local changes are committed
-  3) The changelogs in the Grok packages are up to date.
-
-The `zest.releaser` package provides a command line utility to help reviewing
-the changelog. It will display a diff between the most recently created
-release tag and the current maintenance branch of trunk::
-
-  $ ./bin/lasttagdiff
-
-After having reviewed the changelog (and making sure any changes are commited!)
-the actual release can be made::
+After having reviewed the changes and updating the changelog of a package (and
+making sure any changes are commited!) the actual release can be made::
 
   $ ./bin/fullrelease
 
-Grok Tookit contains a post-release step triggered by zest.releaser that will
-upload a ``versions.cfg`` file to::
+Part of the ``fullrelease`` procedure is the registration and upload of the
+packge to the Python `Package Index <http://pypi.pytthon.org/>`_. Make sure
+you're actually allowed to upload the particular package to the index!
+
+Making the groktoolkit release
+==============================
+
+Releases of groktoolkit are similar to that of making releases of the
+individual packages. The ``zest.releaser`` tool will help you create the
+release tag and update the version information.
+
+The groktoolkit contains a post-release step triggered by ``zest.releaser``
+that will upload a ``versions.cfg`` file to::
 
    grok.zope.org:/var/www/html/grok/releaseinfo/[VERSION]/versions.cfg
 
-Manual post-release steps
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Manual groktoolkit post-release steps
+-------------------------------------
 
-After having released Grok, the following steps should be taken:
+After having released the groktoolkit, the following steps should be taken:
 
 1. Grokproject generates a ``buildout.cfg`` with an ``extends`` directive
    pointing to the most recent release versions file. It determines the URL
@@ -72,8 +75,17 @@ After having released Grok, the following steps should be taken:
    .. _`releases folder`: http://grok.zope.org/project/releases/
 
 3. Official Documentation: Create a build of the docs from the tagged
-   release and copy it to the server. Detailed steps are documented in the
-   `Updating the Official Grok Documentation (OGD)`_ page.
+   release and copy it to the server. The steps are roughly as follows::
+
+   $ svn co svn+ssh://svn.zope.org/repos/main/groktoolkit/tags/[VERSION] gtk
+   $ cd gtk
+   $ python bootstrap.py
+   $ ./bin/buildout -c documentation.cfg
+   $ cd doc && make clean && make all
+   $ scp -r _build/html grok.zope.org:/var/www/html/grok/doc/[VERSION]
+   $ ssh grok.zope.org \
+     "rm /var/www/html/grok/doc/current; \
+      ln -s /var/www/html/grok/doc/[VERSION] /var/www/html/grok/current"
 
 4. Create a news item in the `blog folder`_ announcing the news. The text
    can be based on the release notes written at point 7.
@@ -87,22 +99,12 @@ After having released Grok, the following steps should be taken:
 
      http://grok.zope.org/portal_skins/custom/portlet_download/manage_main
 
-7. Community Documentation: Update the Plone Help Center used for Grok
-   Community Documentation so that the new Version is available. Important: you
-   can select multiple "current" versions for community documentation, any
-   documentation for a release which is not "current" gets a big nasty
-   "outdated" header at the top of it. We only want to do this for
-   documentation which is truly outdated and no longer best practice. Do this
-   here: http://grok.zope.org/documentation/edit
-
 8. Send out an email to at least zope-announce@zope.org as well as grok-
    dev@zope.org announcing the new release. The text can be based on the
    release notes written at step 2.
 
 9. Update the Grok Wikipedia article with the information about the latest
    release: http://en.wikipedia.org/wiki/Grok_(web_framework)
-
-.. _`Updating the Official Grok Documentation (OGD)`: http://grok.zope.org/project/meta/updating-the-official-grok-documentation-ogd
 
 Binary eggs on Windows
 ----------------------

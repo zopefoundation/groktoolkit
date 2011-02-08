@@ -11,30 +11,30 @@
   <p><strong>Sections</strong></p>
   <table class="contentstable" align="center"><tr>
     <td width="50%">
-      <p class="biglink"><a class="biglink" href="{{ pathto("tutorial") }}">Grok Tutorial</a><br>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutorial") }}">Grok tutorial</a><br>
         <span class="linkdescr">Get started with Grok.</span></p>
 
-      <p class="biglink"><a class="biglink" href="{{ pathto("reference/index") }}">The Grok Reference</a><br>
+      <p class="biglink"><a class="biglink" href="{{ pathto("reference/index") }}">Grok reference</a><br>
         <span class="linkdescr">Describes syntax and package elements.</span></p>
-
-      <p class="biglink"><a class="biglink" href="{{ pathto("grok_overview") }}">Grok Developer Notes</a><br>
-        <span class="linkdescr">Overview of what's in Grok and how to use it.</span></p>
-
-      <p class="biglink"><a class="biglink" href="{{ pathto("naming_conventions") }}">Naming Conventions</a><br>
-        <span class="linkdescr">How to name your stuff correctly.</span></p>
-
-    </td><td width="50%">
-	  <p class="biglink"><a class="biglink" href="{{ pathto("packages") }}">Packages</a><br>
-	    <span class="linkdescr">The packages that comprise Grok.</span></p>
 
 	  <p class="biglink"><a class="biglink" href="{{ pathto("upgrade") }}">Upgrade notes</a><br>
 	    <span class="linkdescr">How to upgrade your project to a new version of Grok.</span></p>
 
-      <p class="biglink"><a class="biglink" href="{{ pathto("developing_grok") }}">Developing Grok</a><br>
-        <span class="linkdescr">Notes for developers <strong>of</strong> Grok.</span></p>
+	  <p class="biglink"><a class="biglink" href="{{ pathto("packages") }}">Packages</a><br>
+	    <span class="linkdescr">The packages that comprise Grok.</span></p>
 
       <p class="biglink"><a class="biglink" href="{{ pathto("releases") }}">Releases</a><br>
 	    <span class="linkdescr">A history of Grok releases.</span></p>
+
+    </td><td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("grok_overview") }}">Grok developer notes</a><br>
+        <span class="linkdescr">Overview of what's in Grok and how to use it.</span></p>
+
+      <p class="biglink"><a class="biglink" href="{{ pathto("naming_conventions") }}">Naming conventions</a><br>
+        <span class="linkdescr">How to name your stuff correctly.</span></p>
+
+      <p class="biglink"><a class="biglink" href="{{ pathto("release") }}">Making releases of Grok</a><br>
+        <span class="linkdescr">Notes for developers <strong>of</strong> Grok.</span></p>
 
     </td></tr>
   </table>
@@ -44,10 +44,10 @@
     <td width="50%">
       <p class="biglink"><a class="biglink" href="{{ pathto("contents") }}">Table of Contents</a><br>
          <span class="linkdescr">Lists all sections and subsections.</span></p>
-<!--
+
       <p class="biglink"><a class="biglink" href="{{ pathto("search") }}">Search page</a><br>
          <span class="linkdescr">search this documentation</span></p>
--->
+
     </td><td width="50%">
       <p class="biglink"><a class="biglink" href="{{ pathto("genindex") }}">Index</a><br>
          <span class="linkdescr">All functions, classes, terms.</span></p>
