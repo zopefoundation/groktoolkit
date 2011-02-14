@@ -1,4 +1,4 @@
-# Generate package list information for trunk and tags of the Grok Toolkit.
+# Generate package list information for the Grok Toolkit.
 # This script has been shamelessly copied from the Zope Toolkit documentation
 # and heavily modified.
 
