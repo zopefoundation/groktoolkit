@@ -6,6 +6,25 @@ An overview of Grok releases
 
 Information about new features, changes and bug fixes for releases of Grok.
 
+`Grok 1.4 <http://grok.zope.org/doc/1.4>`_
+  Grok 1.4 is a feature release of Grok.
+
+  It includes new features in `grokcore.view
+  <http://pypi.python.org/pypi/grokcore.view>`_ like allowing for the use of
+  the ``grok.provides()`` directive in view components, the addition of a
+  ``grok:ignoreTemplates`` ZCML directive to configure what template filename
+  extensions are to be ignore when reporting unassociated templates, improved
+  reporting of unassociated templates and improved ``grok.template()``
+  directive inheritance.
+
+  It includes new ``Subscriptions`` and ``MultiSubscriptions`` components from
+  `grokore.component <http://pypi.python.org/pypi/grokcore.component>`_
+
+  It includes the latest `zope.testbrowser
+  <http://pypi.python.org/pypi/zope.testbrowser>`_ version that is based on
+  `WebOb <http://pypi.python.org/pypi/WebOb>`_ and `WebTest
+  <http://pypi.python.org/pypi/WebTest>`_.
+
 `Grok 1.3.2 <http://grok.zope.org/doc/1.3.2>`_
   Grok 1.3.2 is a bugfix release of Grok, including updates for
   `zope.errorview <http://pypi.python.org/pypi/zope.errorview>`_ and
