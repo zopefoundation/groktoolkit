@@ -83,9 +83,7 @@ After having released the groktoolkit, the following steps should be taken:
    $ ./bin/buildout -c documentation.cfg
    $ cd doc && make clean && make all
    $ scp -r _build/html grok.zope.org:/var/www/html/grok/doc/[VERSION]
-   $ ssh grok.zope.org \
-     "rm /var/www/html/grok/doc/current; \
-      ln -s /var/www/html/grok/doc/[VERSION] /var/www/html/grok/current"
+   $ ssh grok.zope.org "rm /var/www/html/grok/doc/current; ln -s /var/www/html/grok/doc/[VERSION] /var/www/html/grok/current"
 
 4. Create a news item in the `blog folder`_ announcing the news. The text
    can be based on the release notes written at point 7.
