@@ -12,6 +12,21 @@ refer to ``CHANGES.txt`` for those).
 **Warning**. Please be sure to always backup your data (especially the
 ``Data.fs`` file) before you perform upgrades.
 
+.. _upgrade_notes_1.5:
+
+Upgrading to 1.5 (2012-05-02)
+-----------------------------
+
+To upgrade your Grok based project, make sure your project's ``buildout.cfg``
+extends from the ``versions.cfg`` of the latest Grok Toolkit release. This file
+can be found here::
+
+    http://grok.zope.org/releaseinfo/1.5/versions.cfg
+
+Then re-run ``bootstrap.py`` in your project to prevent potential
+``zc.buildout`` version conflicts. Then run ``bin/buildout`` to get the latest
+versions of all of the packages that comprise the Grok Toolkit.
+
 .. _upgrade_notes_1.4:
 
 Upgrading to 1.4 (2011-04-04)

@@ -46,6 +46,9 @@ def package_list(
     print >>out, TABLE_HEADER
     for package in sorted(packages):
         version = config.get('versions', package)
+        if package == 'IPython':
+            # XXX ugly ugly ugly hack.
+            package = 'ipython'
         doap_xml = urllib2.urlopen(
             'http://pypi.python.org/pypi?:action=doap&name=%s&version=%s' %
             (package, version)).read()
@@ -89,23 +92,17 @@ def write_package_list(path, version, use_trunk=False):
     print >>output, '=' * len(heading)
 
     print >>output, """
-Release yadda yadda.
 """
 
-    #ztk_version = None
-    #extends = config.get('buildout', 'extends').splitlines()
-    #for extend in extends:
-    #    if 'ztk-versions.cfg' not in extend:
-    #        continue
-
-    ztk_version = '1.1'
+    ztk_version = '1.1.4'
     print >>output, 'Zope Toolkit %s' % ztk_version
     print >>output, '------------------------------'
     print >>output, """
 This Grok released is based on Zope Toolkit %s.
 
-`Overview <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`_ of the
-ZTK. List of the ZTK `packages <http://docs.zope.org/zopetoolkit/releases/packages-%s.html>`_
+`Overview <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`_ of
+the ZTK. List of the ZTK `packages
+<http://docs.zope.org/zopetoolkit/releases/packages-%s.html>`_
 """ % (ztk_version, ztk_version, ztk_version)
 
     print >>output, 'Packages'
@@ -122,7 +119,7 @@ ZTK. List of the ZTK `packages <http://docs.zope.org/zopetoolkit/releases/packag
     print >>output, 'Other dependencies'
     print >>output, '------------------'
     all = config.options('versions')
-    dependencies = (set(all) - set(included)) - set(deprecating)
+    dependencies = (set(all) - set(included)) #- set(deprecating)
     package_list(dependencies, config, output)
     output.close()
 
