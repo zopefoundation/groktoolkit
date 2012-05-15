@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '1.5.4'
+version = '1.5.5dev'
 
 setup(
     name='groktoolkit',
