@@ -1,7 +1,6 @@
-import os
 from setuptools import setup, find_packages
 
-version = '1.5.6dev'
+version = '2.0.dev0'
 
 setup(
     name='groktoolkit',
@@ -20,7 +19,7 @@ setup(
         'zc.buildout',
         'zest.releaser',
         ],
-    entry_points = {
+    entry_points={
         'zest.releaser.releaser.after': [
             'upload_ztk_versions=groktoolkit:upload_entrypoint',
             ],
