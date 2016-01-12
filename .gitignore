@@ -5,6 +5,7 @@ syntax:glob
 *.pyo
 *.swp
 bin
+dev/*
 develop/*
 develop-eggs
 docs/_build
@@ -16,4 +17,4 @@ docs/Makefile
 .installed.cfg
 .mr.developer.cfg
 parts
-src/*
+src/*.egg-info
