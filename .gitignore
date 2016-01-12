@@ -16,4 +16,4 @@ docs/Makefile
 .installed.cfg
 .mr.developer.cfg
 parts
-src/*.egg-info
+src/*
