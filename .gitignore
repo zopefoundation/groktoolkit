@@ -5,6 +5,7 @@ syntax:glob
 *.pyo
 *.swp
 bin
+dev/*
 develop/*
 develop-eggs
 docs/_build
