@@ -3,9 +3,9 @@ python:
     - 2.7
     - 3.5
 install:
-    - python bootstrap.py
-    - bin/buildout
+    - pip install -r requirements.txt
+    - buildout
 script:
-    - bin/test-grok
+    - test-grok
 notifications:
     email: false
