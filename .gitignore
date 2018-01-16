@@ -2,6 +2,7 @@
 *.pyc
 *.pyo
 *.swp
+.cache/
 .coverage*
 .installed.cfg
 .mr.developer.cfg
@@ -15,6 +16,7 @@ docs/doctrees
 docs/html
 docs/latex
 docs/make.bat
+eggs/
 htmlcov/
 include/
 lib/
