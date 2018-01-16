@@ -4,7 +4,7 @@ python:
     - 3.5
 install:
     - pip install -U -r requirements.txt
-    - buildout
+    - bin/buildout -vvv
 script:
     - test-grok
 notifications:
