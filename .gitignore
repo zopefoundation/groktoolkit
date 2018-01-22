@@ -26,3 +26,4 @@ pip-selfcheck.json
 pyvenv.cfg
 src/*.egg-info
 share/
+Library
