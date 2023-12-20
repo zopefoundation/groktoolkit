@@ -1,0 +1,33 @@
+# Generated from:
+# https://github.com/zopefoundation/meta/tree/master/config/toolkit
+[meta]
+template = "toolkit"
+commit-id = "1a1f5e27"
+
+[python]
+with-sphinx-doctests = false
+with-docs = true
+with-future-python = false
+with-pypy = true
+with-macos = false
+with-windows = false
+
+[tox]
+use-flake8 = true
+testenv-commands = [
+    "{envdir}/bin/test-grok {posargs:-cv}",
+    ]
+testenv-setenv = [
+    "zope_i18n_compile_mo_files=True",
+    ]
+
+[coverage]
+fail-under = "not applicable"
+
+[check-manifest]
+additional-ignores = [
+    "docs/_build/html/*",
+    "docs/_build/html/*/*",
+    "docs/_build/html/*/*/*",
+    "docs/_build/html/*/*/*/*",
+    ]
