@@ -27,7 +27,7 @@ setup(
         "Programming Language :: Python :: Implementation :: CPython",
     ],
     zip_safe=False,
-    install_requires=[],
-    entry_points={}
     python_requires='>=3.7',
+    install_requires=[],
+    entry_points={},
     )
