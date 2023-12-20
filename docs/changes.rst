@@ -1,6 +1,8 @@
 3.0.0a2 (unreleased)
 --------------------
 
+  - Add support for Python 3.12.
+
 - Drop the following packages:
 
   - grokcore.rest (it is still just a dependency of some packages)
