@@ -51,5 +51,5 @@ Creating a release
 * Push your changes, make sure also the tag is pushed.
 * Switch to the branch ``gh-pages``.
 * Run ``build_indexes.sh``, add and commit the changes.
-* Push the changes to GitHub, after some seconds the changes should appear at
+* Push the changes to GitHub, after some minutes the changes should appear at
   https://zopefoundation.github.io/zopetoolkit/.

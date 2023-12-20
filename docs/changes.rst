@@ -1,3 +1,6 @@
+
+.. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
+
 3.0 (2023-12-20)
 ----------------
 
