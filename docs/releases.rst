@@ -6,6 +6,14 @@ An overview of Grok releases
 
 Information about new features, changes and bug fixes for releases of Grok.
 
+Current releases
+================
+
+.. include:: changes.rst
+
+Historic releases
+=================
+
 `Grok 1.5 <http://grok.zope.org/doc/1.5>`_
   Grok 1.5 is a feature release of Grok including updates and bugfixes in
   most of the comprsing grokcore.* packages.
