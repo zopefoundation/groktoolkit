@@ -29,4 +29,5 @@ setup(
     zip_safe=False,
     install_requires=[],
     entry_points={}
+    python_requires='>=3.7',
     )
