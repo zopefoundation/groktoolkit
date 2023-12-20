@@ -4,8 +4,9 @@ include *.yaml
 include buildout.cfg
 include documentation.cfg
 include grok.cfg
+include grok-sources.cfg
+include grok-versions.cfg
 include tox.ini
-include ztk-versions.cfg
 recursive-include docs *.bat
 recursive-include docs *.cfg
 recursive-include docs *.css

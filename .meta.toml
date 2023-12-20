@@ -20,6 +20,14 @@ testenv-commands = [
 testenv-setenv = [
     "zope_i18n_compile_mo_files=True",
     ]
+testenv-additional = [
+    "",
+    "[testenv:checkversions]",
+    "commands_pre =",
+    "    {envbindir}/buildout -nc {toxinidir}/buildout.cfg buildout:directory={envdir} install checkversions",
+    "commands =",
+    "    {envdir}/bin/checkversions grok-versions.cfg []",
+    ]
 
 [coverage]
 fail-under = "not applicable"
