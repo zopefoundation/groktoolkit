@@ -1,4 +1,4 @@
-Chameleon==4.4.2
+Chameleon==4.5.0
 fanstatic==1.4
 grok==4.0
 grokcore.annotation==4.0
