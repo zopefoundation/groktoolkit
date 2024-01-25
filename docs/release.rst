@@ -19,6 +19,9 @@ Releasing a new GROK toolkit version
 Updating versions of dependencies
 ---------------------------------
 
+Manual way
+++++++++++
+
 To get new version pins into GROK toolkit run the following steps:
 
 * Check https://zopefoundation.github.io/zopetoolkit/ whether there is a new
@@ -33,6 +36,15 @@ To get new version pins into GROK toolkit run the following steps:
 * Run the ``checkversion`` call from above again to make sure all possible
   versions are updated.
 * If the test runs are successful: create a pull request on GitHub.
+
+Automated way
++++++++++++++
+
+* There is a dependabot configuration automatically updating
+  ``dependabot/requirements.txt``.
+
+* And there is a GitHub actions job syncing between
+  ``dependabot/requirements.txt`` and ``grok-versions.cfg``.
 
 Creating a release
 ------------------
