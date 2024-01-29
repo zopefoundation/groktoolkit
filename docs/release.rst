@@ -63,6 +63,8 @@ Creating a release
 * Create a git tag using ``git tag`` and your version number.
 * Push your changes, make sure also the tag is pushed.
 * Switch to the branch ``gh-pages``.
+* If you increased the major version number, edit ``build_indexes.sh``: In line
+  8 add an ``-l`` parameter for your new major version number.
 * Run ``build_indexes.sh``, add and commit the changes.
 * Push the changes to GitHub, after some minutes the changes should appear at
   https://zopefoundation.github.io/zopetoolkit/.
