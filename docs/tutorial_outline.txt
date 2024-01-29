@@ -68,22 +68,22 @@ Models
 Once we know how to show things, we need to go into what we're
 actually showing: the model. This involves view/model separation,
 dealing with the ZODB and persistence, and constructing applications
-from models and containers. 
+from models and containers.
 
 Note that we also include some more advanced view use cases which only
 tend to become relevant with more complicated applications (such as
 redirection).
 
   * A view for a model
- 
+
   * Storing data
- 
+
   * Redirection
 
   * Showing the value in the form
 
   * The rules of persistence
- 
+
   * Containers
 
 Some notes:
@@ -134,7 +134,7 @@ widget some dynamic behavior.
 
 XXX we need to make it easy to make widgets in Grok.
 
-XXX this needs work on the Grok end to at least expose JSON, and perhaps
+XXX this needs work on the Grok end, and perhaps
      we need to ship with a 'recommended' Javascript library.
 
 Security
@@ -195,11 +195,6 @@ A brief introduction to automatic testing. Introduce how to unit test
 and functional test with doctests.
 
 XXX We probably need to do some development work on a test grokker.
-
-XMLRPC 
-------
-
-Show how to do XMLRPC with Grok.
 
 Extending grok
 --------------

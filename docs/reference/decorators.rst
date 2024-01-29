@@ -33,8 +33,7 @@ functionality.
 
 .. function:: require(name_or_class)
 
-    The decorated method will be protected by the permission. Used in
-    web service views such as REST or XML-RPC.
+    The decorated method will be protected by the permission.
 
 
 :func:`grok.adapter/grok.implementer` -- declare an adapter factory
@@ -42,12 +41,12 @@ functionality.
 
 These decorators are always used in tandem to declare an adapter factory.
 
-.. function:: grok.adapter(*classes_or_interfaces) 
+.. function:: grok.adapter(*classes_or_interfaces)
 
     Describes that a function adapts an object or a combination
     of objects.
 
-.. function:: grok.implementer(interface) 
+.. function:: grok.implementer(interface)
 
     Describes that a function that's used as an adapter
     implements an interface or a number of interfaces.
