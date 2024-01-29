@@ -15,7 +15,6 @@ grokcore.startup==4.0
 grokcore.traverser==4.0
 grokcore.view==4.0
 grokcore.viewlet==4.0
-grokui.admin==1.0
 grokui.base==0.8.2
 ipython==8.20.0
 martian==2.0.post1
