@@ -4,6 +4,10 @@
 
 - [grok-versions.cfg](releases/master/grok-versions.cfg)
 
+## 4.0
+
+- [grok-versions.cfg](releases/4.0/grok-versions.cfg)
+
 ## 3.0
 
 - [grok-versions.cfg](releases/3.0/grok-versions.cfg)
