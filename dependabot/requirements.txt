@@ -1,4 +1,4 @@
-Chameleon==4.5.0
+Chameleon==4.5.1
 grok==5.0
 grokcore.annotation==4.0
 grokcore.catalog==4.0
