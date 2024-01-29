@@ -79,14 +79,3 @@ XXX render fields
 XXX render actions
 </form>
 """)
-
-
-class CalculatorXMLRPC(grok.XMLRPC):
-
-    @grok.require('zope.Public')  # this is actually the default
-    def sum(self, operand, operator, operand2):
-        return ...
-
-    @grok.require('something.else')
-    def whatever(self):
-        return ...
