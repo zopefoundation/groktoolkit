@@ -67,4 +67,4 @@ Creating a release
   8 add an ``-l`` parameter for your new major version number.
 * Run ``build_indexes.sh``, add and commit the changes.
 * Push the changes to GitHub, after some minutes the changes should appear at
-  https://zopefoundation.github.io/zopetoolkit/.
+  https://zopefoundation.github.io/groktoolkit/.
