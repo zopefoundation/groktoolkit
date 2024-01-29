@@ -12,6 +12,12 @@
 
   - ``grokcore.json``
 
+- Drop support ``zope.fanstatic``, as this repository has been archived and
+  does not support Python 3.12.
+
+- Remove ``fanstatic`` from the list of version pins as it was only needed by
+  ``zope.fanstatic``.
+
 
 3.0 (2023-12-20)
 ----------------
