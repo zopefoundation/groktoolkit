@@ -56,6 +56,7 @@ Creating a release
   who are using the no longer supported Python version.)
 * Update ``docs/changes.rst`` with a new entry describing your release or
   update an existing not yet released one. (also set the release date).
+* Update ``version`` in ``docs/conf.py`` to the new version number.
 * Check the documentation builds using ``tox -e docs`` and proof-read your
   changes.
 * Commit your changes to ``git``.
