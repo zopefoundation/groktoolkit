@@ -22,7 +22,6 @@ setup(name='Sample',
       zip_safe=False,
       install_requires=['setuptools',
                         'grok',
-                        'grokui.admin',
                         'z3c.testsetup',
                         'grokcore.startup',
                         # Add extra requirements here
