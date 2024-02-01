@@ -68,3 +68,19 @@ Creating a release
 * Run ``build_indexes.sh``, add and commit the changes.
 * Push the changes to GitHub, after some minutes the changes should appear at
   https://zopefoundation.github.io/groktoolkit/.
+
+
+Setup for Dependabot auto-update
+================================
+
+* You need a personal access token of one of the zopefoundation admins. (Currently one of ``icemac`` is used.)
+* To create the token go to https://github.com/settings/apps -> Fine-grained personal access tokens:
+
+  * Repository access: ``zopefoundation/groktoolkit``
+  * Repository permissions: Read and Write access for Contents
+  * Save the token in your clipboard.
+
+* Enter the token at:
+
+  * Actions secrets: https://github.com/zopefoundation/groktoolkit/settings/secrets/actions -> Repository secrets -> ``COMMIT_ACTIONS_TOKEN``
+  * Dependabot secrets: https://github.com/zopefoundation/groktoolkit/settings/secrets/dependabot -> Repository secrets -> ``COMMIT_ACTIONS_TOKEN``
