@@ -46,7 +46,7 @@ requests-toolbelt==1.0.0
 shutilwhich==1.1.0
 simplegeneric==0.8.1
 soupsieve==2.5
-tqdm==4.66.1
+tqdm==4.66.2
 traitlets==5.14.1
 twine==4.0.2
 waitress==3.0.0
