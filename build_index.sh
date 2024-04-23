@@ -5,7 +5,7 @@ printf "# GROK Toolkit Releases\n\n" > README.md
 rm -rf releases
 
 # 3.0.0a1 has no versions file.
-for tag in "master" $(git tag -l "4*" -l "3*" | sort -r | grep -v "3.0.0a1"); do
+for tag in "master" $(git tag -l "5*" -l "4*" -l "3*" | sort -r | grep -v "3.0.0a1"); do
     echo $tag
     mkdir -p releases/$tag
     git show $tag:grok-versions.cfg > releases/$tag/grok-versions.cfg
