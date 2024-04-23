@@ -1,11 +1,15 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
-4.1 (unreleased)
+5.0 (2024-04-23)
 ----------------
 
 - Drop ``grokui.admin`` from list of version pins and from all tutorial apps as
   its repository has been archived.
+
+- Update dependencies to their newest versions.
+
+- Update to ZTK 2.2.
 
 
 4.0 (2024-01-29)

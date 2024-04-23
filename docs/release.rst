@@ -49,6 +49,10 @@ Automated way
 Creating a release
 ------------------
 
+* Check whether there is a new version of ZTK (Compare
+  https://zopefoundation.github.io/zopetoolkit/ with ``buildout.cfg``)
+
+  * If there is newer version: Update to it and run the tests using ``tox -pauto``.
 * Make sure all tests are running successfully.
 * Decide on a version number for the new release, taking https://semver.org/
   into account. (Please note: dropping support for a Python version is
@@ -56,7 +60,8 @@ Creating a release
   who are using the no longer supported Python version.)
 * Update ``docs/changes.rst`` with a new entry describing your release or
   update an existing not yet released one. (also set the release date).
-* Update ``version`` in ``docs/conf.py`` to the new version number.
+* Update ``version`` and ``copyright`` in ``docs/conf.py`` to the new version
+  number.
 * Check the documentation builds using ``tox -e docs`` and proof-read your
   changes.
 * Commit your changes to ``git``.
@@ -68,6 +73,8 @@ Creating a release
 * Run ``build_indexes.sh``, add and commit the changes.
 * Push the changes to GitHub, after some minutes the changes should appear at
   https://zopefoundation.github.io/groktoolkit/.
+* Create a new release at
+  https://github.com/zopefoundation/groktoolkit/releases.
 
 
 Setup for Dependabot auto-update

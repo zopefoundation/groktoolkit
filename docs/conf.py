@@ -61,13 +61,13 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'Official Grok'
-copyright = '2006-2023, The Zope Foundation'
+copyright = '2006-2024, The Zope Foundation'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '4.0'
+version = '5.0'
 # The full version, including alpha/beta/rc tags.
 release = version
 
