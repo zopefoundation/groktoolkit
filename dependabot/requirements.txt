@@ -11,12 +11,12 @@ grokcore.layout==4.0
 grokcore.message==4.0
 grokcore.security==4.0
 grokcore.site==4.0
-grokcore.startup==4.0
+grokcore.startup==4.1
 grokcore.traverser==4.0
 grokcore.view==4.0
 grokcore.viewlet==4.0
 grokui.base==0.8.2
-ipython==8.24.0
+ipython==8.25.0
 martian==2.0.post1
 z3c.evalexception==4.0
 z3c.flashmessage==3.0
@@ -29,7 +29,7 @@ zope.app.publication==5.0
 zope.app.wsgi==5.0
 zope.errorview==2.0
 zope.generations==5.1.0
-zope.testbrowser==6.0
+zope.testbrowser==7.0
 appnope==0.1.4
 beautifulsoup4==4.12.3
 collective.recipe.omelette==1.1.0
@@ -40,7 +40,7 @@ ipython-genutils==0.2.0
 Paste==3.10.1
 pexpect==4.9.0
 pickleshare==0.7.5
-pkginfo==1.10.0
+pkginfo==1.11.0
 ptyprocess==0.7.0
 requests-toolbelt==1.0.0
 shutilwhich==1.1.0
