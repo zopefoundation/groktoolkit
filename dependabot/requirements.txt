@@ -40,7 +40,7 @@ ipython-genutils==0.2.0
 Paste==3.10.1
 pexpect==4.9.0
 pickleshare==0.7.5
-pkginfo==1.11.0
+pkginfo==1.11.1
 ptyprocess==0.7.0
 requests-toolbelt==1.0.0
 shutilwhich==1.1.0
