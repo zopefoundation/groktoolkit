@@ -1,10 +1,14 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
-6.0 (unreleased)
+5.1 (2024-08-22)
 ----------------
 
 - Drop support for Python 3.7.
+
+- Update to ZTK 3.0.
+
+- Update dependencies to their newest versions.
 
 5.0 (2024-04-23)
 ----------------

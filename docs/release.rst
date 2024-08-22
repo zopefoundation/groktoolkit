@@ -50,14 +50,13 @@ Creating a release
 ------------------
 
 * Check whether there is a new version of ZTK (Compare
-  https://zopefoundation.github.io/zopetoolkit/ with ``buildout.cfg``)
+  https://zopefoundation.github.io/zopetoolkit/ with ``grok.cfg``)
 
   * If there is newer version: Update to it and run the tests using ``tox -pauto``.
 * Make sure all tests are running successfully.
 * Decide on a version number for the new release, taking https://semver.org/
   into account. (Please note: dropping support for a Python version is
-  considered a major change as it enforces changes for users of GROK toolkit
-  who are using the no longer supported Python version.)
+  **no longer** considered a major change, as it is the usual way of life.)
 * Update ``docs/changes.rst`` with a new entry describing your release or
   update an existing not yet released one. (also set the release date).
 * Update ``version`` and ``copyright`` in ``docs/conf.py`` to the new version
