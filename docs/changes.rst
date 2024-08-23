@@ -1,6 +1,12 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
+5.2 (unreleased)
+----------------
+
+- Drop version pins for ``twine`` and ``pkginfo`` as they are not used and we
+  pinned incompatible versions resulting in an error downstream.
+
 5.1 (2024-08-22)
 ----------------
 
