@@ -16,7 +16,7 @@ grokcore.traverser==4.0
 grokcore.view==4.0
 grokcore.viewlet==4.0
 grokui.base==0.8.2
-ipython==8.26.0
+ipython==8.27.0
 martian==2.0.post1
 z3c.evalexception==4.0
 z3c.flashmessage==3.0
@@ -49,7 +49,7 @@ tqdm==4.66.5
 traitlets==5.14.3
 waitress==3.0.0
 WebOb==1.8.8
-WebTest==3.0.0
+WebTest==3.0.1
 WSGIProxy2==0.5.1
 z3c.autoinclude==1.0
 zc.recipe.egg==2.0.7
