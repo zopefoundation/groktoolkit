@@ -13,11 +13,8 @@ release guidelines`_.
 
 .. _`official release guidelines`: https://zopetoolkit.readthedocs.io/en/latest/process/releasing-software.html
 
-Releasing a new GROK toolkit version
-=====================================
-
 Updating versions of dependencies
----------------------------------
+=================================
 
 Manual way
 ++++++++++
@@ -46,8 +43,8 @@ Automated way
 * And there is a GitHub actions job syncing between
   ``dependabot/requirements.txt`` and ``grok-versions.cfg``.
 
-Creating a release
-------------------
+Releasing a new GROK toolkit version
+=====================================
 
 * Check whether there is a new version of ZTK (Compare
   https://zopefoundation.github.io/zopetoolkit/ with ``grok.cfg``)
