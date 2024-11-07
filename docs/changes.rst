@@ -9,6 +9,8 @@
 - Drop version pins for ``twine`` and ``pkginfo`` as they are not used and we
   pinned incompatible versions resulting in an error downstream.
 
+- Update zopetoolkit to version 3.1.
+
 5.1 (2024-08-22)
 ----------------
 

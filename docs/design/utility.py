@@ -12,7 +12,7 @@ class Calculator(grok.GlobalUtility):
     grok.provides(ICalculator)  # this is actually the default
 
 
-grok.global_utility(Calculator, provides=ICalculator, name=u'')
+grok.global_utility(Calculator, provides=ICalculator, name='')
 
 
 class LocalCalculator(grok.LocalUtility):
@@ -23,7 +23,7 @@ class Anything(grok.Model):
     pass
 
 
-class NonPersistent(object):
+class NonPersistent:
     pass
 
 
