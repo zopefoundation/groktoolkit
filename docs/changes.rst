@@ -4,6 +4,8 @@
 5.2 (unreleased)
 ----------------
 
+- Add support for Python 3.13.
+
 - Drop version pins for ``twine`` and ``pkginfo`` as they are not used and we
   pinned incompatible versions resulting in an error downstream.
 
