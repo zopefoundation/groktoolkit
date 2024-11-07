@@ -11,6 +11,8 @@
 
 - Update zopetoolkit to version 3.1.
 
+- Add ``zope.testbrowser`` to the list of tested packages.
+
 5.1 (2024-08-22)
 ----------------
 
