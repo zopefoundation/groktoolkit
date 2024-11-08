@@ -60,7 +60,7 @@ def package_list(
         doap.parse(doap_xml)
         description = ' '.join(
             doap.find('//{%s}shortdesc' % DOAP_NS).text.splitlines())
-        homepage = 'http://pypi.python.org/pypi/%s/%s' % (package, version)
+        homepage = f'http://pypi.python.org/pypi/{package}/{version}'
         print(line % dict(
             name=package, homepage=homepage,
             description=description, version=version), file=out)
@@ -85,7 +85,7 @@ def write_package_list(path, version, use_trunk=False):
 
     config = ConfigParser.RawConfigParser()
     config.optionxform = str
-    fp = StringIO.StringIO((location/'grok.cfg').read())
+    fp = StringIO.StringIO((location / 'grok.cfg').read())
     config.readfp(fp)
     output = open(path, 'w')
 
@@ -102,12 +102,12 @@ def write_package_list(path, version, use_trunk=False):
     print('Zope Toolkit %s' % ztk_version, file=output)
     print('------------------------------', file=output)
     print("""
-This Grok released is based on Zope Toolkit %s.
+This Grok released is based on Zope Toolkit {}.
 
-`Overview <http://docs.zope.org/zopetoolkit/releases/overview-%s.html>`_ of
+`Overview <http://docs.zope.org/zopetoolkit/releases/overview-{}.html>`_ of
 the ZTK. List of the ZTK `packages
-<http://docs.zope.org/zopetoolkit/releases/packages-%s.html>`_
-""" % (ztk_version, ztk_version, ztk_version), file=output)
+<http://docs.zope.org/zopetoolkit/releases/packages-{}.html>`_
+""".format(ztk_version, ztk_version, ztk_version), file=output)
 
     print('Packages', file=output)
     print('--------', file=output)

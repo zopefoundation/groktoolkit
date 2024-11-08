@@ -52,7 +52,7 @@ class Index(grok.Form):
     """
 
     class fields:
-        operand = schema.Int(title=u'Operand')
+        operand = schema.Int(title='Operand')
         operator = schema.Choice(...)
         operand2 = schema.Int(...)
 

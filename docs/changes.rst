@@ -4,8 +4,14 @@
 5.2 (unreleased)
 ----------------
 
+- Add support for Python 3.13.
+
 - Drop version pins for ``twine`` and ``pkginfo`` as they are not used and we
   pinned incompatible versions resulting in an error downstream.
+
+- Update zopetoolkit to version 3.1.
+
+- Add ``zope.testbrowser`` to the list of tested packages.
 
 5.1 (2024-08-22)
 ----------------

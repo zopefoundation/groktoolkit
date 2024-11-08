@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Grok Reference documentation build configuration file, created by
 # sphinx-quickstart.py on Wed Feb 20 02:11:17 2008.
@@ -22,7 +21,7 @@ version = 'Unknown'
 setupfilepath = path.join(path.dirname(
     path.dirname(path.abspath(curdir))), 'setup.py')
 reg = re.compile(r"^\s*version=.(.+).,.*")
-for line in open(setupfilepath, 'r').read().split():
+for line in open(setupfilepath).read().split():
     m = reg.match(line)
     if m:
         version = m.groups()[0]
@@ -129,7 +128,7 @@ html_style = 'default.css'
 # latex_documents = []
 latex_documents = [
     ('reference.tex', 'Grok Reference', 'The Grok Team', 'manual')
-    ]
+]
 
 # Additional stuff for the LaTeX preamble.
 # latex_preamble = '

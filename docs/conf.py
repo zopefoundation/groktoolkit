@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Grok Reference documentation build configuration file, created by
 # sphinx-quickstart.py on Wed Feb 20 02:11:17 2008.
@@ -45,7 +44,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    ]
+]
 
 # Order autodoc generated docs in source code order.
 autodoc_member_order = 'alphabetical'
@@ -175,7 +174,7 @@ latex_documents = [
      'manual'),
     (path.join('reference', 'index'), 'reference.tex', 'Grok Reference',
      'The Grok Team', 'manual'),
-    ]
+]
 
 # Additional stuff for the LaTeX preamble.
 latex_preamble = r'''
@@ -195,8 +194,8 @@ latex_preamble = r'''
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'grok', u'grok Documentation',
-     [u'The Grok developers and community'], 1)
+    ('index', 'grok', 'grok Documentation',
+     ['The Grok developers and community'], 1)
 ]
 
 

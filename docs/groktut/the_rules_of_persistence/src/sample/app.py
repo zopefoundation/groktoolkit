@@ -3,7 +3,7 @@ import grok
 
 class Sample(grok.Application, grok.Container):
     def __init__(self):
-        super(Sample, self).__init__()
+        super().__init__()
         self.list = []
 
 

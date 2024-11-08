@@ -157,21 +157,21 @@ main = menu.Menu(
 
 # ########### Implementation sketches
 
-class ViewMenuItem(object):
+class ViewMenuItem:
 
     def __init__(self, view):
         # View must be a view
         pass
 
 
-class Action(object):
+class Action:
 
     def __init__(self, title, target):
         self.title = title
         self.target = target    # TALES expression
 
 
-class BaseMenuItem(object):
+class BaseMenuItem:
 
     def __init__(self, condition):
         self.condition = condition
@@ -183,7 +183,7 @@ class BaseMenuItem(object):
         pass
 
 
-class Menu(object):
+class Menu:
 
     def __init__(self, menu_items):
         # XXX assert: All items must be menu items
