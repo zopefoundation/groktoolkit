@@ -53,7 +53,7 @@ autodoc_member_order = 'alphabetical'
 templates_path = ['.']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = {'.rst': 'restructuredtext'}
 
 # The master toctree document.
 master_doc = 'index'
@@ -66,7 +66,7 @@ copyright = '2006-2024, The Zope Foundation'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '6.0'
+version = '5.2'
 # The full version, including alpha/beta/rc tags.
 release = version
 
