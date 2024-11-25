@@ -26,7 +26,7 @@ zc.catalog==3.0
 zope.app.appsetup==5.0
 zope.app.debug==4.0.0
 zope.app.publication==5.0
-zope.app.wsgi==5.2
+zope.app.wsgi==5.2.1
 zope.errorview==2.0
 zope.generations==5.1.0
 zope.testbrowser==7.0
@@ -47,7 +47,7 @@ requests-toolbelt==1.0.0
 shutilwhich==1.1.0
 simplegeneric==0.8.1
 soupsieve==2.6
-tqdm==4.67.0
+tqdm==4.67.1
 traitlets==5.14.3
 waitress==3.0.2
 WebOb==1.8.9
