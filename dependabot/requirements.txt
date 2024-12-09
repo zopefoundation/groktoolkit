@@ -2,7 +2,7 @@ Chameleon==4.5.4
 grok==5.1
 grokcore.annotation==4.0
 grokcore.catalog==4.0
-grokcore.chameleon==4.0
+grokcore.chameleon==4.1
 grokcore.component==4.1
 grokcore.content==4.1
 grokcore.error==4.0
