@@ -1,10 +1,13 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
-5.2 (2024-11-08)
+6.0 (unreleased)
 ----------------
 
 - Drop support for Python 3.8.
+
+5.2 (2024-11-08)
+----------------
 
 - Add support for Python 3.13.
 
