@@ -4,6 +4,8 @@
 5.2 (2024-11-08)
 ----------------
 
+- Drop support for Python 3.8.
+
 - Add support for Python 3.13.
 
 - Drop version pins for ``twine`` and ``pkginfo`` as they are not used and we
