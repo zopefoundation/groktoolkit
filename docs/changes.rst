@@ -1,12 +1,14 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
-6.0 (unreleased)
+5.3 (unreleased)
 ----------------
 
 - Drop support for Python 3.8.
 
 - Update to zopetoolkit version 3.2.
+
+- Update dependencies to their newest versions.
 
 5.2 (2024-11-08)
 ----------------
