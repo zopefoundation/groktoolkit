@@ -63,6 +63,8 @@ Releasing a new GROK toolkit version
 * Commit your changes to ``git``.
 * Create a git tag using ``git tag`` and your version number.
 * Push your changes, make sure also the tag is pushed.
+* Run ``postrelease`` to update the version number to the next development
+  version.
 * Switch to the branch ``gh-pages``.
 * If you increased the major version number, edit ``build_indexes.sh``: In line
   8 add an ``-l`` parameter for your new major version number.
