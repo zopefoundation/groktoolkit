@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-version = '5.3.dev0'
+version = '5.4.dev0'
 
 with open('README.rst') as f:
     README = f.read()
