@@ -37,7 +37,7 @@ collective.recipe.template==2.2
 decorator==5.2.1
 gnureadline==8.2.13
 ipython-genutils==0.2.0
-legacy-cgi==2.6.2
+legacy-cgi==2.6.3
 mock==5.2.0
 Paste==3.10.1
 pexpect==4.9.0
