@@ -4,7 +4,8 @@
 5.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Completely drop ``z3c.autoinclude`` as all packages in groktoolkit no longer
+  use it.
 
 
 5.3 (unreleased)
