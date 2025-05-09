@@ -51,6 +51,8 @@ Releasing a new GROK toolkit version
 
   * If there is newer version: Update to it and run the tests using ``tox -pauto``.
 * Make sure all tests are running successfully.
+* Check wether the supported Python version are correct in ``grok-versions.cfg``,
+  see ``.github/workflows/tests.yml`` for the Python versions under test.
 * Decide on a version number for the new release, taking https://semver.org/
   into account. (Please note: dropping support for a Python version is
   **no longer** considered a major change, as it is the usual way of life.)
