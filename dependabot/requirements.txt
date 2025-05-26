@@ -5,11 +5,11 @@ grokcore.catalog==4.0
 grokcore.chameleon==4.1
 grokcore.component==4.1.1
 grokcore.content==4.1
-grokcore.error==4.0
+grokcore.error==4.1
 grokcore.formlib==4.0
 grokcore.layout==4.0
 grokcore.message==4.0
-grokcore.security==4.0
+grokcore.security==4.1
 grokcore.site==4.0
 grokcore.startup==4.1
 grokcore.traverser==4.0
