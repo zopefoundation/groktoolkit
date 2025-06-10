@@ -1,11 +1,11 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
-5.4 (unreleased)
+5.4 (2025-06-10)
 ----------------
 
 - Completely drop ``z3c.autoinclude`` as all packages in groktoolkit no longer
-  use it.
+  use it (it got deprecated in version 3.0).
 
 - Update to zopetoolkit version 3.3.
 
