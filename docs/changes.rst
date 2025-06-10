@@ -7,6 +7,8 @@
 - Completely drop ``z3c.autoinclude`` as all packages in groktoolkit no longer
   use it.
 
+- Update to zopetoolkit version 3.3.
+
 
 5.3 (unreleased)
 ----------------
