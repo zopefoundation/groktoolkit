@@ -1,6 +1,13 @@
 
 .. note:: The buildout versions file for all current versions can be found at https://zopefoundation.github.io/groktoolkit/
 
+5.5 (unreleased)
+----------------
+
+- Include Zope toolkit (ZTK) versions directly into GROK toolkit and run their
+  tests here so we no longer depend on ZTK releases to see updates of these
+  versions.
+
 5.4 (2025-06-10)
 ----------------
 

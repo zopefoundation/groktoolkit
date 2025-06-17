@@ -46,10 +46,6 @@ Automated way
 Releasing a new GROK toolkit version
 =====================================
 
-* Check whether there is a new version of ZTK (Compare
-  https://zopefoundation.github.io/zopetoolkit/ with ``grok.cfg``)
-
-  * If there is newer version: Update to it and run the tests using ``tox -pauto``.
 * Make sure all tests are running successfully.
 * Check wether the supported Python version are correct in ``grok-versions.cfg``,
   see ``.github/workflows/tests.yml`` for the Python versions under test.
