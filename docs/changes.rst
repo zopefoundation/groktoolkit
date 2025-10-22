@@ -4,6 +4,8 @@
 5.5 (unreleased)
 ----------------
 
+- Drop support for Python 3.9.
+
 - Include Zope toolkit (ZTK) versions directly into GROK toolkit and run their
   tests here so we no longer depend on ZTK releases to see updates of these
   versions.
