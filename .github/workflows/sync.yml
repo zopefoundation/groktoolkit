@@ -2,6 +2,8 @@ name: Sync Requirements
 
 on:
   pull_request:
+permissions:
+  contents: write
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
