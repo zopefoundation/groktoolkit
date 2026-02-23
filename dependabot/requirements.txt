@@ -96,12 +96,12 @@ grokcore.error==5.0
 grokcore.formlib==5.0
 grokcore.layout==5.0
 grokcore.message==5.0
-grokcore.security==5.0
+grokcore.security==5.1
 grokcore.site==5.0
 grokcore.startup==5.0
 grokcore.traverser==5.0
 grokcore.view==5.0
-grokcore.viewlet==5.0
+grokcore.viewlet==5.1
 ipython==9.10.0
 martian==2.1
 z3c.evalexception==4.0
