@@ -18,7 +18,7 @@ zope.copypastemove==6.0
 zope.datetime==6.0
 zope.deferredimport==6.1.1
 zope.deprecation==6.0
-zope.dottedname==7.0
+zope.dottedname==7.1
 zope.dublincore==6.0
 zope.error==6.0
 zope.event==6.1
@@ -68,7 +68,7 @@ ZConfig==4.3
 ZODB==6.2
 bcrypt==5.0.0
 cffi==2.0.0
-multipart==1.3.0
+multipart==1.3.1
 persistent==6.5
 pycparser==3.0
 python-gettext==5.0
@@ -94,7 +94,7 @@ grokcore.component==5.0
 grokcore.content==5.0
 grokcore.error==5.0
 grokcore.formlib==5.0
-grokcore.layout==5.0
+grokcore.layout==5.1
 grokcore.message==5.0
 grokcore.security==5.1
 grokcore.site==5.0
