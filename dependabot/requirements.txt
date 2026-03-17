@@ -99,7 +99,7 @@ grokcore.message==5.0
 grokcore.security==5.1
 grokcore.site==5.0
 grokcore.startup==5.0
-grokcore.traverser==5.0
+grokcore.traverser==5.1
 grokcore.view==5.0
 grokcore.viewlet==5.1
 ipython==9.11.0
