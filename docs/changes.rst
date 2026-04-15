@@ -12,6 +12,9 @@
   tests here so we no longer depend on ZTK releases to see updates of these
   versions.
 
+- Drop ``z3c.checkversions`` from GROK toolkit as it is archived because it
+  does not support native namespaces.
+
 5.4 (2025-06-10)
 ----------------
 
