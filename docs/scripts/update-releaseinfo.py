@@ -2,12 +2,12 @@
 # This script has been shamelessly copied from the Zope Toolkit documentation
 # and heavily modified.
 
+import importlib.metadata
+import json
 import os
 import os.path
 import socket
 import xml.etree.ElementTree
-
-import pkg_resources
 
 import ConfigParser
 import py.path
@@ -130,8 +130,11 @@ the ZTK. List of the ZTK `packages
 
 if __name__ == '__main__':
     path = os.path.abspath(os.path.join('packages.rst'))
-    dist = pkg_resources.get_distribution('groktoolkit')
+    dist = importlib.metadata.distribution('groktoolkit')
     use_trunk = False
-    if dist.precedence <= pkg_resources.DEVELOP_DIST:
-        use_trunk = True
-    write_package_list(path, dist.version, use_trunk=use_trunk)
+    direct_url = dist.read_text('direct_url.json')
+    if direct_url:
+        url_info = json.loads(direct_url)
+        if url_info.get('dir_info', {}).get('editable', False):
+            use_trunk = True
+    write_package_list(path, dist.metadata['Version'], use_trunk=use_trunk)
