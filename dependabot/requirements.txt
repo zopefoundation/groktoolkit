@@ -117,9 +117,9 @@ zope.generations==7.0
 zope.testbrowser==8.0
 appnope==0.1.4
 beautifulsoup4==4.14.3
-collective.recipe.omelette==2.0.0
+collective.recipe.omelette==3.0.0
 collective.recipe.template==2.2
-decorator==5.2.1
+decorator==5.3.1
 gnureadline==8.3.3
 ipython-genutils==0.2.0
 legacy-cgi==2.6.4
