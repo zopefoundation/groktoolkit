@@ -1,16 +1,17 @@
-# Generated from:
-# https://github.com/zopefoundation/meta/tree/master/config/toolkit
+# Generated with zope.meta (https://zopemeta.readthedocs.io/) from:
+# https://github.com/zopefoundation/meta/tree/master/src/zope/meta/toolkit
 [meta]
 template = "toolkit"
-commit-id = "ad3bfb10"
+commit-id = "966ac0d8"
 
 [python]
 with-sphinx-doctests = false
 with-docs = true
-with-future-python = false
+with-future-python = true
 with-pypy = true
 with-macos = false
 with-windows = false
+with-free-threaded-python = false
 
 [tox]
 testenv-commands = [
