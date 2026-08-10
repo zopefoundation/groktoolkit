@@ -67,7 +67,7 @@ RestrictedPython==8.4
 ZConfig==4.3
 ZODB==6.3
 bcrypt==5.0.0
-cffi==2.1.0
+cffi==2.1.1
 multipart==2.0.0
 persistent==6.7
 pycparser==3.0
@@ -77,7 +77,7 @@ transaction==5.1
 zc.lockfile==4.0
 zodbpickle==4.4
 six==1.17.0
-coverage==7.15.2
+coverage==7.15.4
 manuel==1.13.0
 collective.recipe.cmd==0.11
 mr.developer==2.0.4
@@ -101,7 +101,7 @@ grokcore.startup==5.0
 grokcore.traverser==5.1
 grokcore.view==5.1
 grokcore.viewlet==5.1
-ipython==9.16.0
+ipython==9.16.1
 martian==2.1
 z3c.evalexception==4.0
 z3c.flashmessage==4.0
@@ -130,12 +130,12 @@ ptyprocess==0.7.0
 requests-toolbelt==1.0.0
 shutilwhich==1.1.0
 simplegeneric==0.8.1
-soupsieve==2.9.1
+soupsieve==2.9.2
 tqdm==4.70.0
-traitlets==5.15.1
+traitlets==5.16.1
 typing-extensions==4.16.0
 waitress==3.0.2
-WebOb==1.8.10
+WebOb==1.8.11
 WebTest==3.0.7
 WSGIProxy2==0.5.1
 zdaemon==5.2.1
