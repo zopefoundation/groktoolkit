@@ -1,10 +1,8 @@
 <html>
 <body>
-<p>The information:
-  <span tal:content="python:context.information()">info</span>
-</p>
-<p>The information, reversed: 
-  <span tal:replace="python:view.reversed_information()">info</span>
-</p>
+<form tal:attributes="action view/url" method="POST">
+Text to store: <input type="text" name="text" value="" /><br />
+<input type="submit" value="Store" />
+</form>
 </body>
 </html>
