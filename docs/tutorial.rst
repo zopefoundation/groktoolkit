@@ -142,7 +142,7 @@ libraries. After all that your Grok project is ready to go.
   Windows, where we supply binary versions of the required libraries.
 
   On Debian and Ubuntu this is the ``python-dev`` package
-  (``python2.6-dev for Python 2.6). You also need ``build-essential``.
+  (``python2.6-dev`` for Python 2.6). You also need ``build-essential``.
 
 Starting up the web server
 --------------------------
@@ -222,7 +222,7 @@ the web server (``bin/paster``) as well as the executable for the buildout
 system (``bin/buildout``) which can be used to re-build your project (to update
 it or to install a new dependency).
 
-The ``parts` directory contain configuration and data created and managed by
+The ``parts`` directory contain configuration and data created and managed by
 ``buildout``, such as the Zope object database (ZODB) storage, and the ``.ini``
 files to be used with ``paster``.
 
@@ -1286,8 +1286,8 @@ Here is the ``app.py`` of our new application:
 .. include:: groktut/containers/src/sample/app.py
   :literal:
 
-As you can see, ``Sample`` is unchanged. We have also created our first non-
-application object, ``Entry``. It is just a ``grok.Model``. It needs to be
+As you can see, ``Sample`` is unchanged. We have also created our first
+non-application object, ``Entry``. It is just a ``grok.Model``. It needs to be
 created with an argument ``text`` and this text is stored in it. We intend to
 place instances of ``Entry`` in our ``Sample`` container.
 

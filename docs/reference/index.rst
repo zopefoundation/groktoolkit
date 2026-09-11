@@ -7,7 +7,7 @@
 
 :Reference for Grok version: |version|
 :Document last updated: |today|
-    
+
 This is the Grok reference documentation. It is organized by the Python
 artefacts that implement it's concepts.
 

@@ -9,7 +9,7 @@ changes in the direction of PEP 8.
 
 modulenames - module and package names are all lower case, no
 underscores
-              
+
 ClassNames - CamelCase (Zope 3 + PEP 8)
 
 methodNames - camelCase: follow Zope 3 conventions. We work a lot with Zope 3
@@ -18,7 +18,7 @@ methodNames - camelCase: follow Zope 3 conventions. We work a lot with Zope 3
 attribute_names - Zope 3 + PEP 8
 
 class_annotations - we break with Zope 3 tradition
-                    (grok.local_utility() versus implementsOnly()). 
+                    (grok.local_utility() versus implementsOnly()).
                     This makes class annotations stand out a bit
                     more and is more consistent with the use of
                     class-level attribute names for customization

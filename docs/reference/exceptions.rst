@@ -58,4 +58,3 @@ hint, to help you fix the error.
    .. attribute:: GrokError.component
 
       The component that was grokked and triggered the error.
-
