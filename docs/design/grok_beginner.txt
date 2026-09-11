@@ -33,7 +33,7 @@ Dynamic pages
 Often you want your web pages not to be static but *dynamic*. A web
 page is dynamic when, before the web page is served to your user for
 display in a browser, you want to generate part or all of the
-information of the web page automatically. 
+information of the web page automatically.
 
 Zope reads your HTML files as Zope Page Templates (ZPT), meaning you
 can use TAL (Template Attribute Language) to script your
@@ -63,7 +63,7 @@ Python, is limited. The idea of good application design is to use TAL
 just for fairly simple templating purposes, and to do anything a bit
 more complicated in Python code. Using TAL with Python code is easy:
 you just add methods to your view class and use them from your
-template. 
+template.
 
 Here we add a method that formats the current date and time::
 
@@ -72,7 +72,7 @@ Here we add a method that formats the current date and time::
 
   class Website(grok.View):
       grok.files('mydirectory')
-      
+
       def currentDatetime(self):
           return datetime.now().strftime('%Y-%m-%d %H:%M')
 
@@ -107,7 +107,7 @@ into the template::
 
   class Website(grok.View):
       grok.files('mydirectory')
-    
+
       def someHTML(self):
            return '<strong>%s</strong>' % (1 + 1)
 
@@ -207,10 +207,10 @@ together, returning the sum::
 
 class Website(grok.View):
       grok.files('mydirectory')
-  
+
       class sum(object):
           """corresponds to sum.html"""
- 
+
           @grok.before()
           def sendEmail(self):
             ...
@@ -231,8 +231,8 @@ class Website(grok.View):
            def calculateSum(self):
                 ...
 
-     
-      @grok.data('sum.html', 'sum')      
+
+      @grok.data('sum.html', 'sum')
       def sum(self):
           # get hold of the form, from the request object that
           # we can get from self
@@ -261,7 +261,7 @@ Often you don't just want to see a result page when a user submits a
 form, but you want the let the system do some work just before we show
 the result. An example of this is to send an email. Another common
 example is to store the data that's in the form in a database
-somewhere. 
+somewhere.
 
 This can be easily accomplished using the `@grok.before` decorator,
 which allows us to execute some Python code just before the template
@@ -269,10 +269,10 @@ is rendered::
 
   class Website(grok.View):
       grok.templates('mydirectory')
-    
+
       @grok.before('email_sent.html')
       def email(self):
-          ... send the email XXX ... 
+          ... send the email XXX ...
 
 
 Storing data
@@ -320,7 +320,7 @@ own sub objects::
 
   class Website(grok.View):
      grok.templates('mydirectory')
-   
+
      def getNamesStorage(self):
          """Get the names storage, or create it if it's not there yet.
          """
@@ -337,7 +337,7 @@ own sub objects::
          """
          storage = self.getNamesStorage()
          storage.addName(self.request['name'])
-         
+
 XXX should following be separate section?
 
 Note that storing names in a list is not very efficient if the list of
@@ -347,7 +347,7 @@ avoid this using BTrees. XXX BTree explanation
 
 XXX showing the names in a web page
 
-Self-posting forms 
+Self-posting forms
 ==================
 
 It's a good design for many forms to be *self-posting*, that is, the
@@ -366,7 +366,7 @@ Let's first make a form that posts to itself, we'll call it just
   </body></html>
 
 We expect the user to enter an integer number, and we also want it the
-number to be required. Only if those conditions are true 
+number to be required. Only if those conditions are true
 ....
 
 XXX can't use . perhaps, need to do absolute trick and explain it: request/URL
@@ -384,7 +384,7 @@ class Foo(grok.View):
        # that renders the form. (this template needs to be
        # moved)
        template = grok.Template('entry.html')
-       
+
        form_fields = grok.Fields(
           name=schema.TextLine(title='Name'),
           )

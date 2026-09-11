@@ -39,7 +39,7 @@ div.body {
     background-color: white;
     padding: 1.5em;
     border-left: 1px solid #999;
-    
+
 }
 
 div.clearer {
@@ -61,7 +61,7 @@ div.footer a {
 
 div.header {
     background: #999999 url("top_bg.jpg") repeat-x;
-    padding: 0.5em 1em 0 1em; 
+    padding: 0.5em 1em 0 1em;
 }
 
 div.header a{
@@ -472,7 +472,7 @@ div#suggest-changes-box textarea {
 
 
 /* :::: PREVIEW :::: */
-div.preview { 
+div.preview {
     background-image: url(style/preview.png);
     padding: 0 20px 20px 20px;
     margin-bottom: 30px;
@@ -923,8 +923,8 @@ img.logo {
 
 /* :::: PRINT :::: */
 @media print {
-    div.document, 
-    div.documentwrapper, 
+    div.document,
+    div.documentwrapper,
     div.bodywrapper {
         margin: 0;
         width : 100%;
