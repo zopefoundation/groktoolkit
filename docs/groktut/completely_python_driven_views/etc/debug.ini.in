@@ -1,33 +1,67 @@
-Grok naming conventions
------------------------
+# debug.ini
+#
+# Debugging configuration for use with paster/WSGI
+#
 
-Zope 3 used to follow PEP 8, but then PEP 8 changed so that
-methodNames() is deprecated in favor of method_names().
+[loggers]
+keys = root, wsgi
 
-Grok aims to be mostly consistent with Zope 3, but does make some
-changes in the direction of PEP 8.
+[handlers]
+keys = console, accesslog
 
-modulenames - module and package names are all lower case, no
-underscores
+[formatters]
+keys = generic, accesslog
 
-ClassNames - CamelCase (Zope 3 + PEP 8)
+[formatter_generic]
+format = %(asctime)s %(levelname)s [%(name)s] %(message)s
 
-methodNames - camelCase: follow Zope 3 conventions. We work a lot with Zope 3
-              classes and sometimes subclass.
+[formatter_accesslog]
+format = %(message)s
 
-attribute_names - Zope 3 + PEP 8
+[handler_console]
+class = StreamHandler
+args = (sys.stderr,)
+level = NOTSET
+formatter = generic
 
-class_annotations - we break with Zope 3 tradition
-                    (grok.local_utility() versus implementsOnly()).
-                    This makes class annotations stand out a bit
-                    more and is more consistent with the use of
-                    class-level attribute names for customization
-                    as well (as in formlib).
+[handler_accesslog]
+class = FileHandler
+args = (os.path.join(r'${buildout:directory}', 'parts', 'log', 'access.log'),
+        'a')
+level = INFO
+formatter = accesslog
 
-top_level_functions - Zope 3 uses camel case (getUtility()).  Grok
-                      uses underscores for top-level functions that
-                      define class annotations. Grok internally has also
-                      been using underscores for functions defined
-                      internally. So far we have avoided exposing them
-                      to the outside world. If you need to expose
-                      one of these, bring it up on the grok-dev mailing list.
+[logger_root]
+level = INFO
+handlers = console
+
+[logger_wsgi]
+level = INFO
+handlers = accesslog
+qualname = wsgi
+propagate = 0
+
+[filter:translogger]
+use = egg:Paste#translogger
+setup_console_handler = False
+logger_name = wsgi
+
+[filter-app:main]
+# Change the last part from 'ajax' to 'pdb' for a post-mortem debugger
+# on the console:
+use = egg:z3c.evalexception#ajax
+next = zope
+
+[app:zope]
+use = egg:Sample#debug
+filter-with = translogger
+exempt-exceptions = zope.security.interfaces.IUnauthorized
+
+[server:main]
+use = egg:Paste#http
+host = 127.0.0.1
+port = 8080
+
+[DEFAULT]
+# set the name of the zope.conf file
+zope_conf = %(here)s/zope.conf

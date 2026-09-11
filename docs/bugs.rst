@@ -37,7 +37,7 @@ Otherwise, if you're not logged in, enter your credentials and select
 "Log In".  It is not possible to submit a bug report anonymously.
 
 Being now logged in, you can submit a bug.  You will be asked a number
-of questions.
+of questions. 
 
 For the "Summary" field, enter a *very* short description of the
 problem; less than ten words is good.  In the "Further Information"

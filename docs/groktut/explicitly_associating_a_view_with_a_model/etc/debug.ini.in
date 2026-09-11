@@ -1,35 +1,67 @@
-# Generated with zope.meta (https://zopemeta.readthedocs.io/) from:
-# https://github.com/zopefoundation/meta/tree/master/src/zope/meta/toolkit
+# debug.ini
 #
-# Generated from:
-# https://github.com/zopefoundation/meta/tree/master/config/toolkit
+# Debugging configuration for use with paster/WSGI
+#
 
-[build-system]
-requires = [
-    "setuptools >= 78.1.1,< 82",
-    "wheel",
-]
-build-backend = "setuptools.build_meta"
+[loggers]
+keys = root, wsgi
 
-[tool.coverage.run]
-branch = true
-source = ["groktoolkit"]
+[handlers]
+keys = console, accesslog
 
-[tool.coverage.report]
-fail_under = "not applicable"
-precision = 2
-ignore_errors = true
-show_missing = true
-exclude_lines = [
-    "pragma: no cover",
-    "pragma: nocover",
-    "except ImportError:",
-    "raise NotImplementedError",
-    "if __name__ == '__main__':",
-    "self.fail",
-    "raise AssertionError",
-    "raise unittest.Skip",
-]
+[formatters]
+keys = generic, accesslog
 
-[tool.coverage.html]
-directory = "parts/htmlcov"
+[formatter_generic]
+format = %(asctime)s %(levelname)s [%(name)s] %(message)s
+
+[formatter_accesslog]
+format = %(message)s
+
+[handler_console]
+class = StreamHandler
+args = (sys.stderr,)
+level = NOTSET
+formatter = generic
+
+[handler_accesslog]
+class = FileHandler
+args = (os.path.join(r'${buildout:directory}', 'parts', 'log', 'access.log'),
+        'a')
+level = INFO
+formatter = accesslog
+
+[logger_root]
+level = INFO
+handlers = console
+
+[logger_wsgi]
+level = INFO
+handlers = accesslog
+qualname = wsgi
+propagate = 0
+
+[filter:translogger]
+use = egg:Paste#translogger
+setup_console_handler = False
+logger_name = wsgi
+
+[filter-app:main]
+# Change the last part from 'ajax' to 'pdb' for a post-mortem debugger
+# on the console:
+use = egg:z3c.evalexception#ajax
+next = zope
+
+[app:zope]
+use = egg:Sample#debug
+filter-with = translogger
+exempt-exceptions = zope.security.interfaces.IUnauthorized
+
+[server:main]
+use = egg:Paste#http
+host = 127.0.0.1
+port = 8080
+
+[DEFAULT]
+# set the name of the zope.conf file
+zope_conf = %(here)s/zope.conf
