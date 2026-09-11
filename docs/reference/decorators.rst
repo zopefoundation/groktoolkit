@@ -56,26 +56,25 @@ These decorators are always used in tandem to declare an adapter factory.
 
 .. code-block:: python
 
-	@grok.adapter(ICave)
-	@grok.implementer(IHome)
-	def home_for_cave(cave):
-	    return Home()
+    @grok.adapter(ICave)
+    @grok.implementer(IHome)
+    def home_for_cave(cave):
+        return Home()
 
 **Example 2: Adapt a regular class instead of an interface**
 
 .. code-block:: python
 
-	@grok.adapter(Cave)
-	@grok.implementer(IHome)
-	def home_for_cave(cave):
-	    return Home()
+    @grok.adapter(Cave)
+    @grok.implementer(IHome)
+    def home_for_cave(cave):
+        return Home()
 
 **Example 3: Declare a multi-adapter factory**
 
 .. code-block:: python
 
-	@grok.adapter(ICave, IFire)
-	@grok.implementer(ICozy)
-	def cozy_dwelling(cave, fire):
-	    return Dwelling()
-
+    @grok.adapter(ICave, IFire)
+    @grok.implementer(ICozy)
+    def cozy_dwelling(cave, fire):
+        return Dwelling()

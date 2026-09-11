@@ -161,4 +161,3 @@ will appear as input fields in that order.
 ===============================
 
 .. autofunction:: grok.create_application
-
