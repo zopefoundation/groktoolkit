@@ -4,7 +4,7 @@
   <include package="sample" />
 
     <configure i18n_domain="sample">
-    
+
       <unauthenticatedPrincipal id="zope.anybody"
                                 title="Unauthenticated User" />
       <unauthenticatedGroup id="zope.Anybody"

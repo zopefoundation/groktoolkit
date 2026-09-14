@@ -13,7 +13,7 @@
 
 <body>
 <div class="header">
-	
+
 	<a href="http://grok.zope.org">
 	<img src="/resources/grok-header.jpg" alt="GROK"/></a>
 	<ul id="navigation">
@@ -27,10 +27,10 @@
 
 
 <div class="roundcont">
-	
+
   <div class="roundtop">
-    <img src="/resources/corner-topleft.jpg" alt="" 
-           width="45" height="45" class="corner" 
+    <img src="/resources/corner-topleft.jpg" alt=""
+           width="45" height="45" class="corner"
            style="display: none" />
   </div>
 
@@ -41,15 +41,15 @@
   </div>
 
   <div class="roundbottom">
-     <img src="/resources/corner-bottomleft.jpg" alt="" 
-     width="45" height="45" class="corner" 
+     <img src="/resources/corner-bottomleft.jpg" alt=""
+     width="45" height="45" class="corner"
      style="display: none" />
   </div>
 
 </div>
 
 <div class="footer">
-	
+
 	<table><tr><td>
 	Grok cooks around the campfire of <br />
 	<a href="http://wiki.zope.org/zope3/FrontPage"><img src="/resources/zopelogo.gif" alt="Zope" style="padding: 0.5em;" /></a>
@@ -65,4 +65,3 @@
 </body>
 </html>
 </metal:block>
-

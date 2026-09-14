@@ -3,7 +3,7 @@
 <p>The information:
   <span tal:content="python:context.information()">info</span>
 </p>
-<p>The information, reversed: 
+<p>The information, reversed:
   <span tal:replace="python:view.reversed_information()">info</span>
 </p>
 </body>

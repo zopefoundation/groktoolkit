@@ -347,8 +347,8 @@ is converted into a CGI query string appended to the URL::
                    to point to a view or subobject of the context.
 
 * self.url(object, u"name") - URL to the provided object, with
-  		   ``/name`` appended, to point to a view or subobject
-  		   of the provided object.
+                              ``/name`` appended, to point to a view or subobject
+                              of the provided object.
 
 * self.url(object, u"name", data={'name':'Peter', 'age':28})
             - URL to the provided object, with ``/name`` appended

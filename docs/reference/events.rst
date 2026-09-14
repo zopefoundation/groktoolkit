@@ -85,9 +85,9 @@ An object has been moved.
    Interface to subscribe to for when an object is moved.
 
    .. attribute:: object
-      
+
       The subject of the event.
-   
+
    .. attribute:: oldParent
 
       The container stored in before moving.
@@ -95,13 +95,13 @@ An object has been moved.
    .. attribute:: oldName
 
       The name before moving.
-   
+
    .. attribute:: newParent
 
       The container stored in after moving.
 
    .. attribute:: newName
-   
+
       The name after moving.
 
 :class:`IObjectAddedEvent`
@@ -112,13 +112,13 @@ An object has been added to a container.
 .. class:: grok.IObjectAddedEvent
 
    Interface to subscribe to for when an object is added to the database.
-   
+
    Inherits from the `grok.IObjectMovedEvent` interface.
 
    .. attribute:: object
-      
+
       The subject of the event.
-   
+
    .. attribute:: oldParent
 
       The container stored in before moving.
@@ -126,13 +126,13 @@ An object has been added to a container.
    .. attribute:: oldName
 
       The name before moving.
-   
+
    .. attribute:: newParent
 
       The container stored in after moving.
 
    .. attribute:: newName
-   
+
       The name after moving.
 
 :class:`IObjectCopiedEvent`
@@ -147,7 +147,7 @@ An object has been copied.
    Inherits from `grok.IObjectCreatedEvent` interface.
 
    .. attribute:: object
-   
+
       The subject of the event.
 
    .. attribute:: original
@@ -167,7 +167,7 @@ object has been made persistent, that is it's location attributes
    Interface to subscribe to for when an object is created.
 
    .. attribute:: object
-   
+
       The subject of the event.
 
 
@@ -183,9 +183,9 @@ An object has been removed from a container.
    Inherits from `grok.IObjectMovedEvent`.
 
    .. attribute:: object
-      
+
       The subject of the event.
-   
+
    .. attribute:: oldParent
 
       The container stored in before removal.
@@ -202,9 +202,9 @@ The publisher is about to traverse into the object.
 .. class:: grok.IBeforeTraverseEvent
 
    Interface to subscribe to for object traversal.
- 
+
    .. attribute:: object
-      
+
       The object being traversed throguh.
 
    .. attribute:: request
@@ -223,7 +223,7 @@ this:
 .. code-block:: python
 
     from zope import interface
-    
+
     class ObjectEvent(object):
         interface.implements(IObjectEvent)
 
@@ -257,7 +257,7 @@ Event object to send as a notification when an object is modified.
        The subject of the event.
 
     .. attribute:: descriptions
-    
+
         A list of descriptions of the modifications.
 
 **Example 1: Send an object modification event with a modified attribute
@@ -269,18 +269,18 @@ named "field".**
     import zope.event
     import zope.lifecycleevent.Attributes
     from zope.interface import Interface
-    
+
     class ISample(Interface) :
         field = Attribute("A test field")
-    
+
     class Sample(object) :
         grok.implements(ISample)
 
     obj = Sample()
     obj.field = 42
     zope.event.notify(
-    	grok.ObjectModifiedEvent(obj,
-    	zope.lifecycleevent.Attributes(ISample, "field"))
+        grok.ObjectModifiedEvent(obj,
+        zope.lifecycleevent.Attributes(ISample, "field"))
     )
 
 :class:`ContainerModifiedEvent`
@@ -365,7 +365,7 @@ Event object to send as a notification of when an object is copied.
 
     Initialize this event with the new copy and the original object as positional
     arguments.
-    
+
     .. attribute:: object
 
        The subject of the event.
@@ -400,7 +400,7 @@ Event object to send as a notification of when an object is removed.
     Default event implementation of the `grok.IObjectRemovedEvent` interface.
 
     .. attribute:: object
-    
+
         The subject of the event.
 
     .. attribute:: oldParent

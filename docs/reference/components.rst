@@ -684,11 +684,11 @@ so that they can be edited through-the-web.
         determined, :func:`grok.provides` is required to disambiguate
         for what interface the local utility will be registered.
 
-  	.. seealso::
+        .. seealso::
 
-	    Local utilities need to be registered in the context of
-	    :class:`grok.Site` or :class:`grok.Application` using the
-	    :func:`grok.local_utility` directive.
+            Local utilities need to be registered in the context of
+            :class:`grok.Site` or :class:`grok.Application` using the
+            :func:`grok.local_utility` directive.
 
 :class:`grok.Site`
 ==================

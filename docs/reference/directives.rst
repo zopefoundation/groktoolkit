@@ -90,7 +90,7 @@ can help provide more information about a component.
 
   A longer description for a component.
 
- 
+
 :func:`grok.implements`
 =======================
 
@@ -116,7 +116,7 @@ plain `Cave` class as well:
 
     import grok
     from zope import interface
-    
+
     class IPaintable(interface.Interface):
         def paint(color):
             "Paint with a color"
@@ -146,12 +146,12 @@ Next we will make a `PaintableCave` class which does implement the
 
 Now we can create a `PaintableCave` object and when we query the `IPaintable`
 interface it asserts that the object does provide the interface:
-    
+
     >>> paintable_cave = PaintableCave()
     >>> IPaintable.providedBy(paintable_cave)
     True
 
-Note that interfaces, like all things in Python, are by nature of a 
+Note that interfaces, like all things in Python, are by nature of a
 "gentleman's agreement". It's possible to declare that an object provides
 a certain interface when in reality it does not. It's also possible to
 provide magic methods such as `__getattr__` to allow an object to conform
@@ -478,7 +478,7 @@ certain permission.
 
     import grok
     import zope.interface
-    
+
     class Read(grok.Permission):
         grok.name('mypackage.Read')
 
@@ -492,7 +492,7 @@ certain permission.
 
     import grok
     import zope.interface
-    
+
     class Read(grok.Permission):
         grok.name('mypackage.Read')
 
@@ -523,10 +523,10 @@ in which local component registry the indexes should be located.
 .. code-block:: python
 
     class MammothIndexes(grok.Indexes):
-	grok.site(Herd)
-	grok.context(IMammoth)
+        grok.site(Herd)
+        grok.context(IMammoth)
 
-	name = index.Field()
+        name = index.Field()
 
 View directives
 ~~~~~~~~~~~~~~~
@@ -603,7 +603,7 @@ module.
 
 Specify ordering of components.
 
-Ordering is typically used in Viewlets to determine the order in which 
+Ordering is typically used in Viewlets to determine the order in which
 they are displayed.
 
 .. function:: grok.order(order)
