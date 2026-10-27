@@ -95,7 +95,7 @@ grokcore.error==5.0
 grokcore.formlib==5.0
 grokcore.layout==5.1
 grokcore.message==5.0
-grokcore.security==5.1
+grokcore.security==5.2
 grokcore.site==5.1
 grokcore.startup==5.0
 grokcore.traverser==5.1
